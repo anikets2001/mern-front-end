@@ -87,7 +87,7 @@ export const Register = () => {
                   <input
                     type="password"
                     name="password"
-                    placeholder="password "
+                    placeholder="password"
                     id="password"
                     required
                     autoCapitalize="off"
