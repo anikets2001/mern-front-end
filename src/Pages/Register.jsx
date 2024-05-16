@@ -28,8 +28,8 @@ export const Register = () => {
   return (
     <section>
       <main>
-        <div className="section-registration">
-          <div className="container grid gird-two-cols">
+      <div className="section-registration">
+      <div className="container grid grid-two-cols">
             <div className="registration-image">
               <img src={register} alt="register" width="500" height="500" />
             </div>
