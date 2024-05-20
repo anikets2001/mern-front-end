@@ -7,6 +7,8 @@ import { Register } from "./Pages/Register";
 import { Login } from "./Pages/Login";
 import { Contact } from "./Pages/Contact";
 import { Navbar } from "./Components/Navbar";
+import { ErrorPage } from "./Pages/ErrorPage";
+import { Footer } from "./Components/Footer";
 
 const App = () => {
   return (
@@ -19,7 +21,9 @@ const App = () => {
         <Route path="/service" element={<Service />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
