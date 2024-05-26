@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import login from "../images/register.png";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../store/auth";
 
 const URL = "http://localhost:5000/api/auth/login";
 
 export const Login = () => {
   const navigate = useNavigate();
+  const storeTokenInLs = useAuth();
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -35,7 +37,10 @@ export const Login = () => {
       });
       console.log("response data : ", response);
       if (response.ok) {
-        // alert("Login successful");
+        const res_data = await response.json();
+        console.log("res from server:", res_data.token);
+        storeTokenInLs(res_data.token);
+        // localStorage.setItem("token", res_data.token);
         setUser({ email: "", password: "" });
         navigate("/");
       } else {
