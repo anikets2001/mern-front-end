@@ -9,6 +9,7 @@ import { Contact } from "./Pages/Contact";
 import { Navbar } from "./Components/Navbar";
 import { ErrorPage } from "./Pages/ErrorPage";
 import { Footer } from "./Components/Footer";
+import Logout from "./Pages/Logout";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/service" element={<Service />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
